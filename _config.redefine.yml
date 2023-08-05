@@ -13,7 +13,7 @@ info:
   # Author name
   author: DwGoing
   # Site URL
-  url: https://dwgoing.github.io/blog
+  url: https://dwgoing.github.io/blog/
 # BASIC INFORMATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 # IMAGE CONFIGURATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
@@ -21,9 +21,9 @@ defaults:
   # Favicon
   favicon: /images/redefine-favicon.svg
   # Site logo
-  logo:
+  logo: /images/redefine-logo.svg
   # Site avatar
-  avatar: /images/avatar.svg
+  avatar: /images/redefine-avatar.svg
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 # COLORS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
@@ -385,5 +385,5 @@ cdn:
   # Custom CDN URL
   # format example: https://cdn.custom.com/hexo-theme-redefine/${version}/source/${path}
   # The ${path} must be in the source folder of the theme
-  custom_url:
+  custom_url: 
 # CDN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
