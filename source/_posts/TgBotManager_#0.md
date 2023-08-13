@@ -1,5 +1,5 @@
 ---
-title: TgBotManager #0
+title: TgBotManager_#0
 tags:
   - ".NET"
   - "Avalonia"
@@ -18,6 +18,6 @@ TgBotManager 是一套用于集成管理 Telegram bot 的桌面工具。接下�
 
 > - [ ] 界面设计
 > - [ ] 配置管理
-> - [ ] Bot列表
+> - [ ] Bot 列表
 
 ### 开发里程碑
