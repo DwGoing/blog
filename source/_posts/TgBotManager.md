@@ -1,5 +1,5 @@
 ---
-title: TgBotManager_#0
+title: TgBotManager
 tags:
   - ".NET"
   - "Avalonia"
