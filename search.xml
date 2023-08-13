@@ -1,8 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>TgBotManager_#0</title>
-    <url>/blog//2023/08/13/TgBotManager_#0/</url>
+    <title>OnlyPay</title>
+    <url>/blog//2023/08/13/OnlyPay/</url>
+    <content><![CDATA[<p>OnlyPay 是一套 Web3 的企业级多租户跨链支付系统。接下去的工作中，我会从 0-1 来实现它。这个过程中，我会把思路和实现一点点 POST 出来，就像平时做项目一样，也欢迎有兴趣的小伙伴加入！</p>
+<h3 id="项目链接"><a href="#项目链接" class="headerlink" title="项目链接"></a>项目链接</h3><blockquote>
+<p><a class="link"   href="https://github.com/DwGoing/OnlyPay" >https://github.com/DwGoing/OnlyPay <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<h3 id="本阶段目标"><a href="#本阶段目标" class="headerlink" title="本阶段目标"></a>本阶段目标</h3><blockquote>
+<ul>
+<li><input disabled="" type="checkbox"> HD 钱包管理<ul>
+<li><input disabled="" type="checkbox"> 助记词导入</li>
+<li><input disabled="" type="checkbox"> 生成不同类型主链钱包地址</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> EVM 链原生代币及 ERC20 代币相关操作<ul>
+<li><input disabled="" type="checkbox"> 转账</li>
+<li><input disabled="" type="checkbox"> 生成接收钱包</li>
+<li><input disabled="" type="checkbox"> 监控转账及回调</li>
+<li><input disabled="" type="checkbox"> 资金归集</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 用户管理<ul>
+<li><input disabled="" type="checkbox"> 注册</li>
+<li><input disabled="" type="checkbox"> 生成 Token</li>
+<li><input disabled="" type="checkbox"> 通过 Token 使用资金服务</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="开发里程碑"><a href="#开发里程碑" class="headerlink" title="开发里程碑"></a>开发里程碑</h3><blockquote>
+<ul>
+<li><h4 id="设计产品基础架构"><a href="#设计产品基础架构" class="headerlink" title="设计产品基础架构"></a>设计产品基础架构</h4></li>
+</ul>
+<ol>
+<li>funds-system 资金管理系统，包括注册资金账户，生成助记词，生成收款钱包，监听收款及回调等</li>
+<li>user-system 用户系统，实现多租户的权限管理及 Token 发放等</li>
+</ol>
+</blockquote>
+<blockquote>
+<ul>
+<li><h4 id="设计表结构"><a href="#设计表结构" class="headerlink" title="设计表结构"></a>设计表结构</h4>CONFIG<table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">KEY</td>
+<td align="center">varchar</td>
+<td align="center"></td>
+<td align="center">键</td>
+</tr>
+<tr>
+<td align="center">VALUE</td>
+<td align="center">text</td>
+<td align="center"></td>
+<td align="center">值</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Golang</category>
+        <category>Web3</category>
+      </categories>
+      <tags>
+        <tag>Golang</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TgBotManager</title>
+    <url>/blog//2023/08/13/TgBotManager/</url>
     <content><![CDATA[<p>TgBotManager 是一套用于集成管理 Telegram bot 的桌面工具。接下去的工作中，我会从 0-1 来实现它。这个过程中，我会把思路和实现一点点 POST 出来，就像平时做项目一样，也欢迎有兴趣的小伙伴加入！</p>
 <h3 id="项目链接"><a href="#项目链接" class="headerlink" title="项目链接"></a>项目链接</h3><blockquote>
 <p><a class="link"   href="https://github.com/DwGoing/TgBotManager" >https://github.com/DwGoing/TgBotManager <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
