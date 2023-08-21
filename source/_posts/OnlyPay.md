@@ -1,5 +1,5 @@
 ---
-title: OnlyPay
+title: OnlyPay（一）
 tags:
   - "Golang"
 categories:
@@ -13,11 +13,11 @@ OnlyPay 是一套 Web3 的企业级多租户跨链支付系统。接下去的工
 
 > https://github.com/DwGoing/OnlyPay
 
-### 本阶段目标
+### 阶段目标
 
-> - [ ] HD 钱包管理
->   - [ ] 助记词导入
->   - [ ] 生成不同类型主链钱包地址
+> - [x] HD 钱包管理
+>   - [x] 助记词导入
+>   - [x] 生成不同类型主链钱包地址
 > - [ ] EVM 链原生代币及 ERC20 代币相关操作
 >   - [ ] 转账
 >   - [ ] 生成接收钱包
@@ -28,16 +28,15 @@ OnlyPay 是一套 Web3 的企业级多租户跨链支付系统。接下去的工
 >   - [ ] 生成 Token
 >   - [ ] 通过 Token 使用资金服务
 
-### 开发里程碑
+### 开发思路
 
-> - #### 设计产品基础架构
->
-> 1. funds-system 资金管理系统，包括注册资金账户，生成助记词，生成收款钱包，监听收款及回调等
-> 2. user-system 用户系统，实现多租户的权限管理及 Token 发放等
+> - 创建项目目录
+>   ![](image1.png)
 
-> - #### 设计表结构
->   CONFIG
->   |字段名|类型|默认值|备注|
->   |:---:|:---:|:---:|:---:|
->   |KEY|varchar||键|
->   |VALUE|text||值|
+> - hd_wallet [HD 钱包](https://github.com/DwGoing/OnlyPay/tree/main/pkg/hd_wallet)
+>   1. HD 钱包的思路就是从助记词中还原 seed，然后通过 seed 获得 Master Key,之后的子钱包就通过这个 Key 加上路径来派生出子钱包私钥；
+>   2. 目前先实现 BTC 3 种类型地址生成和 ETH 类型地址生成；
+
+> - fund_service [资金管理服务](https://github.com/DwGoing/OnlyPay/tree/main/internal/service/fund_service)
+>   包括注册资金账户，生成助记词，生成收款钱包，监听收款及回调等功能。
+>   1. 针对不同类型主链实现不同 Processor，不同类型是指 Bitcoin 类、EVM 类、Move 类等，并应该提供 IProcessor 接口；
