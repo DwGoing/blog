@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>OnlyPay</title>
-    <url>//2023/08/17/OnlyPay/</url>
+    <title>OnlyPay（一）</title>
+    <url>//2023/08/21/OnlyPay/</url>
     <content><![CDATA[<p>OnlyPay 是一套 Web3 的企业级多租户跨链支付系统。接下去的工作中，我会从 0-1 来实现它。这个过程中，我会把思路和实现一点点 POST 出来，就像平时做项目一样，也欢迎有兴趣的小伙伴加入！</p>
 <h3 id="项目链接"><a href="#项目链接" class="headerlink" title="项目链接"></a>项目链接</h3><blockquote>
 <p><a class="link"   href="https://github.com/DwGoing/OnlyPay" >https://github.com/DwGoing/OnlyPay <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 </blockquote>
-<h3 id="本阶段目标"><a href="#本阶段目标" class="headerlink" title="本阶段目标"></a>本阶段目标</h3><blockquote>
+<h3 id="阶段目标"><a href="#阶段目标" class="headerlink" title="阶段目标"></a>阶段目标</h3><blockquote>
 <ul>
-<li><input disabled="" type="checkbox"> HD 钱包管理<ul>
-<li><input disabled="" type="checkbox"> 助记词导入</li>
-<li><input disabled="" type="checkbox"> 生成不同类型主链钱包地址</li>
+<li><input checked="" disabled="" type="checkbox"> HD 钱包管理<ul>
+<li><input checked="" disabled="" type="checkbox"> 助记词导入</li>
+<li><input checked="" disabled="" type="checkbox"> 生成不同类型主链钱包地址</li>
 </ul>
 </li>
 <li><input disabled="" type="checkbox"> EVM 链原生代币及 ERC20 代币相关操作<ul>
@@ -29,39 +29,30 @@
 </li>
 </ul>
 </blockquote>
-<h3 id="开发里程碑"><a href="#开发里程碑" class="headerlink" title="开发里程碑"></a>开发里程碑</h3><blockquote>
+<h3 id="开发思路"><a href="#开发思路" class="headerlink" title="开发思路"></a>开发思路</h3><blockquote>
 <ul>
-<li><h4 id="设计产品基础架构"><a href="#设计产品基础架构" class="headerlink" title="设计产品基础架构"></a>设计产品基础架构</h4></li>
+<li>创建项目目录<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/08/21/OnlyPay/image1.png"
+                     
+                ></li>
 </ul>
-<ol>
-<li>funds-system 资金管理系统，包括注册资金账户，生成助记词，生成收款钱包，监听收款及回调等</li>
-<li>user-system 用户系统，实现多租户的权限管理及 Token 发放等</li>
-</ol>
 </blockquote>
 <blockquote>
 <ul>
-<li><h4 id="设计表结构"><a href="#设计表结构" class="headerlink" title="设计表结构"></a>设计表结构</h4>CONFIG<table>
-<thead>
-<tr>
-<th align="center">字段名</th>
-<th align="center">类型</th>
-<th align="center">默认值</th>
-<th align="center">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">KEY</td>
-<td align="center">varchar</td>
-<td align="center"></td>
-<td align="center">键</td>
-</tr>
-<tr>
-<td align="center">VALUE</td>
-<td align="center">text</td>
-<td align="center"></td>
-<td align="center">值</td>
-</tr>
-</tbody></table>
+<li>hd_wallet <a class="link"   href="https://github.com/DwGoing/OnlyPay/tree/main/pkg/hd_wallet" >HD 钱包 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><ol>
+<li>HD 钱包的思路就是从助记词中还原 seed，然后通过 seed 获得 Master Key,之后的子钱包就通过这个 Key 加上路径来派生出子钱包私钥；</li>
+<li>目前先实现 BTC 3 种类型地址生成和 ETH 类型地址生成；</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>fund_service <a class="link"   href="https://github.com/DwGoing/OnlyPay/tree/main/internal/service/fund_service" >资金管理服务 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>包括注册资金账户，生成助记词，生成收款钱包，监听收款及回调等功能。<ol>
+<li>针对不同类型主链实现不同 Processor，不同类型是指 Bitcoin 类、EVM 类、Move 类等，并应该提供 IProcessor 接口；</li>
+</ol>
 </li>
 </ul>
 </blockquote>
@@ -72,30 +63,6 @@
       </categories>
       <tags>
         <tag>Golang</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TgBotManager</title>
-    <url>//2023/08/17/TgBotManager/</url>
-    <content><![CDATA[<p>TgBotManager 是一套用于集成管理 Telegram bot 的桌面工具。接下去的工作中，我会从 0-1 来实现它。这个过程中，我会把思路和实现一点点 POST 出来，就像平时做项目一样，也欢迎有兴趣的小伙伴加入！</p>
-<h3 id="项目链接"><a href="#项目链接" class="headerlink" title="项目链接"></a>项目链接</h3><blockquote>
-<p><a class="link"   href="https://github.com/DwGoing/TgBotManager" >https://github.com/DwGoing/TgBotManager <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</blockquote>
-<h3 id="本阶段目标"><a href="#本阶段目标" class="headerlink" title="本阶段目标"></a>本阶段目标</h3><blockquote>
-<ul>
-<li><input disabled="" type="checkbox"> 界面设计</li>
-<li><input disabled="" type="checkbox"> 配置管理</li>
-<li><input disabled="" type="checkbox"> Bot 列表</li>
-</ul>
-</blockquote>
-<h3 id="开发里程碑"><a href="#开发里程碑" class="headerlink" title="开发里程碑"></a>开发里程碑</h3>]]></content>
-      <categories>
-        <category>.NET</category>
-        <category>Avalonia</category>
-      </categories>
-      <tags>
-        <tag>.NET</tag>
-        <tag>Avalonia</tag>
       </tags>
   </entry>
 </search>
