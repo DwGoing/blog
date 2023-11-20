@@ -712,9 +712,9 @@ hexo-theme-landscape@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmmirror.com/hexo-theme-landscape/-/hexo-theme-landscape-1.0.0.tgz"
 
-hexo-theme-redefine@^2.4.4:
-  version "2.4.4"
-  resolved "https://registry.npmmirror.com/hexo-theme-redefine/-/hexo-theme-redefine-2.4.4.tgz#0357cb9bf28ae3627f52fe720cf52dfe9a275655"
+hexo-theme-redefine@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.npmmirror.com/hexo-theme-redefine/-/hexo-theme-redefine-2.5.3.tgz#1f506db7bf26c9dfd9bb57c5e4a3202e8eb8dabd"
   dependencies:
     postcss "^8.4.28"
 
