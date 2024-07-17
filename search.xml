@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Golang问题记录</title>
-    <url>/Blog/2024/07/14/Golang%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <title>Docker备忘录</title>
+    <url>/Blog/2024/07/17/Docker%E5%A4%87%E5%BF%98%E5%BD%95/</url>
+    <content><![CDATA[<details class="blue" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>安装 For Linux </summary>
+              <div class='content'>
+              <p>For Centos&#x2F;RedHat&#x2F;Rocky</p><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用官方源</span></span><br><span class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或使用Aliyun源</span></span><br><span class="line">sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装组件</span></span><br><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动服务</span></span><br><span class="line">sudo systemctl start docker</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">添加到自启动</span></span><br><span class="line">sudo systemctl enable docker</span><br></pre></td></tr></table></figure></div>
+              </div>
+            </details>]]></content>
+      <tags>
+        <tag>备忘录</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Golang三千问</title>
+    <url>/Blog/2024/07/14/Golang%E4%B8%89%E5%8D%83%E9%97%AE/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>问题记录</category>
